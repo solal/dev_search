@@ -1,0 +1,5 @@
+click
+rich
+prompt_toolkit
+requests
+grequests
