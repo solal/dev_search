@@ -78,7 +78,7 @@ def do_search(query):
 status = Status("[bold green]Searching...")
 def start_search():
     install = InstallData()
-    install.async_check_whitelist_version()
+    # install.async_check_whitelist_version()
 
     user_prompt = UserPrompt()
     query       = user_prompt.search_prompt()
