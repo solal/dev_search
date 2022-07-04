@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dev_search_solal"
+version = "0.0.1"
+authors = [
+  { name="solal", email="solal.fitoussi@gmail.com" },
+]
+description = "A search engine from your command line."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/solal/dev_search"
+"Bug Tracker" = "https://github.com/solal/dev_search/issues"

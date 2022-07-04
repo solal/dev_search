@@ -14,4 +14,5 @@ setup(
         [console_scripts]
         ds=devsearch:cli
     ''',
-)
+)python3 -m pip install --upgrade twine
+
