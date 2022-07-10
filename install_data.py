@@ -2,8 +2,8 @@
 import sqlite3
 import datetime
 import uuid
+import os
 # import grequests
-
 
 
 class InstallData:
@@ -11,7 +11,8 @@ class InstallData:
         self.install_id = self.__get_install_id()
 
     def __fetch_one(self, sql_query):
-        con = sqlite3.connect('domains.db')
+        domains_db_path = os.path.dirname(__file__) + '/domains.db'
+        con = sqlite3.connect(domains_db_path)
         cur = con.cursor()
         cur.execute(sql_query)
         data = cur.fetchone()
