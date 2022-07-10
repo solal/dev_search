@@ -37,7 +37,8 @@ class InstallData:
         now_ms     = datetime.datetime.utcnow().strftime('%Y-%m-%d-%H-%M-%S-000%f')
         install_id = str(uuid.uuid4()) + "-" + now_ms
 
-        con = sqlite3.connect('domains.db')
+        domains_db_path = os.path.dirname(__file__) + '/domains.db'
+        con = sqlite3.connect(domains_db_path)
         cur = con.cursor()
         cur.execute("UPDATE install_data SET install_id = ? WHERE id = 1", (install_id,))
         con.commit()

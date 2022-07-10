@@ -1,5 +1,5 @@
 import sqlite3
-
+import os
 
 
 class Whitelist:
@@ -33,7 +33,8 @@ class Whitelist:
         Returns:
             List:Tuple:A single item tuple with a domain name
         """
-        con = sqlite3.connect('domains.db')
+        domains_db_path = os.path.dirname(__file__) + '/domains.db'
+        con = sqlite3.connect(domains_db_path)
         cur = con.cursor()
         cur.execute("SELECT name FROM domain WHERE name IN ({0})"
             .format(", ".join("?" for _ in raw_domains_list)),
