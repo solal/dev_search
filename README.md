@@ -9,7 +9,7 @@ chmod u+x setup.sh run.sh
 ```
 ./setup.sh
 ```
-4. Add an alias to run `ds` (for `dev search`) to your `PATH` (in your `.bashrc` or relevant file):
+4. Add an alias to run `ds` (for `dev search`) in your `.bashrc` or relevant file:
 ```
 alias ds=". /<PATH_TO_DIR>/run.sh"
 # in my case I have:
